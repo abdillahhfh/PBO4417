@@ -1,5 +1,7 @@
 public class TestSimpleCircle {
+//main class
        public static void main(String[] args) {
+           //pemanggilan/Instansiasi SimpelCircle ke dalam TestSimpleCircle
            SimpleCircle circle1 = new SimpleCircle();
            System.out.println("The area of the circle of radius "+circle1.radius+" is "+circle1.getArea());
 
@@ -15,6 +17,7 @@ public class TestSimpleCircle {
 }
 
 class SimpleCircle{
+    //class biasa
     double radius = 1;
     SimpleCircle(){}
 
