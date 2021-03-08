@@ -1,3 +1,5 @@
+package Teori;
+
 public class TestSimpleCircle {
 //main class
        public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Praktek;
+
 import java.io.*;
 
 public class ReadConsole{
