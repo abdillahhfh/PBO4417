@@ -1,5 +1,7 @@
+package Pertemuan2;
+
 public class MobilDemo2{
     public static void name() {
-        
+        System.out.println("Hello World");
     }
 }
