@@ -1,30 +1,34 @@
 public class MatematikaDemo {
     public static void main(String[] args) {
-        Matematika tambah = new Matematika(10, 10);
-        System.out.println(tambah.pertambahan());
+        Matematika hitung = new Matematika();
+        hitung.pertambahan(1, 2);
+        hitung.pengurangan(8, 4);
+        hitung.perkalian(10, 6);
+        hitung.pembagian(50, 25);
     }
 }
 
 class Matematika{
-    int a;
-    int b;
+    Matematika(){}
 
-    Matematika(int a, int b){}
-
-    int pertambahan(){
-        return a+b;
+    void pertambahan(int a, int b){
+        int c = a+b;
+        System.out.println("Hasil penjumlahan dari "+a+" + "+b+" = " + c);
     }
 
-    int pengurangan(){
-        return a-b;
+    void pengurangan(int a, int b){
+        int c = a-b;
+        System.out.println("Hasil pegurangan dari "+a+" - "+b+" = " + c);
     }
 
-    int perkalian(){
-        return a*b;
+    void perkalian(int a, int b){
+        int c = a*b;
+        System.out.println("Hasil perkalian dari "+a+" x "+b+" = " + c);
     }
 
-    int pembagian(){
-        return a/b;
+    void pembagian(int a, int b){
+        int c = a/b;
+        System.out.println("Hasil pembagian dari "+a+" / "+b+" = " + c);
     }
 
 }
