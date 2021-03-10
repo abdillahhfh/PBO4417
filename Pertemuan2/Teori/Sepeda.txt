@@ -1,0 +1,16 @@
+Objek: Sepeda
+
+Atribut:
+- Warna
+- Merk
+- Jenis: lipat atau mtb
+- Tahun produksi
+
+Behaviour:
+- Jalan ke depan
+- Belok kanan
+- Belok kiri
+- Jalan cepat
+- Jalan lambat
+- Gear up
+- Gear down
