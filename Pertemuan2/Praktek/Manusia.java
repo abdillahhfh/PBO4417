@@ -8,19 +8,19 @@ public class Manusia {
         this.nama = nama;
     }
 
-    String namaSaya(){
+    public String namaSaya(){
         return nama;
     }
 
-    void beliTV(TV tiviku){
+    public void beliTV(TV tiviku){
         punyaTV = true;
     }
 
-    void jualSemuaTV(){
+    public void jualSemuaTV(){
         punyaTV = false;
     }
 
-    boolean cekTV(){
+    public boolean cekTV(){
         return punyaTV;
     }
 }
