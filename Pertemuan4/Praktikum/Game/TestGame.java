@@ -27,5 +27,6 @@ public class TestGame{
         scene.removePlayer(hero1);
         scene.getAllPlayers();
         scene.addEnemy(monster);
+        scene.Interaction();
     }
 }

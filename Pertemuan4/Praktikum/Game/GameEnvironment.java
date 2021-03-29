@@ -18,7 +18,7 @@ public class GameEnvironment {
     }
 
     public void getAllPlayers(){
-        System.out.println(arrPlayer);
+        System.out.println("All of Players: " + arrPlayer);
     }
 
     public void addEnemy(GameEnemy name){
@@ -30,7 +30,7 @@ public class GameEnvironment {
     }
 
     public void getAllEnemies(){
-        System.out.println(arrEnemy);
+        System.out.println("All of Enemies: " + arrEnemy);
     }
 
     public void Interaction(){
@@ -39,17 +39,25 @@ public class GameEnvironment {
         } 
         
         for(int i=0; i<arrPlayer.size(); i++){
-            for(int j=0; i<arrEnemy.size(); i++){
+            for(int j=0; j<arrEnemy.size(); j++){
                 if(arrPlayer.get(i).getY() != arrEnemy.get(j).getY()){
                     System.out.println("Player: "+ arrPlayer.get(i) + " and Enemy: "+ arrEnemy.get(j) + " not in the same position");
                 }
 
+                if(EuclideanDistance(arrPlayer.get(i).getX(), arrPlayer.get(i).getY(), arrEnemy.get(j).getX(), arrEnemy.get(j).getY()) < 2){
+                    System.out.println("Player " + arrPlayer.get(i) + " Attacked");
+                    System.out.println("Enemy " + arrEnemy.get(j) + " loses");
+                } else{
+                    System.out.println("==> Player " + arrPlayer.get(i));
+                    arrPlayer.get(i).Run((int) Math.ceil(Math.random() * 10));
+                    System.out.println("current x postion = " + arrPlayer.get(i).getX() + " <==");
+                }
             }
-        }
-        
+        }   
     }
 
-    // public int EuclideanDistance(int x1, int x2, int y1, int y2){}
-
+    public int EuclideanDistance(int x1, int y1, int x2, int y2){
+        return (int) Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2));
+    }
 }
 
