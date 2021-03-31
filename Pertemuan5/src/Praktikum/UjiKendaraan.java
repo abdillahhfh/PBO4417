@@ -1,3 +1,5 @@
+package Praktikum;
+
 public class UjiKendaraan {
     public static void main(String[] args) {
         Vehicle v1 = new Vehicle();

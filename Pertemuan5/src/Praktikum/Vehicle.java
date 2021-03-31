@@ -1,3 +1,5 @@
+package Praktikum;
+
 public class Vehicle {
     double speed = 0;
     String color = "Orange";

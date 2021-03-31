@@ -1,3 +1,5 @@
+package Praktikum;
+
 public class MotorVehicle extends Vehicle {
     int sizeOfEngine = 1;
     String licencePlate = "H 1 IDN";

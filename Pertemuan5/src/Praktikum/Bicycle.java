@@ -1,3 +1,5 @@
+package Praktikum;
+
 public class Bicycle extends Vehicle {
     
     Bicycle(){}
