@@ -19,7 +19,7 @@ public class Stck {
         System.out.println("Panjang list = " + isi.size());
     }
 
-    public void peek() {
+    public void top() {
         System.out.println("Data top = " + (isi.get(isi.size()-1)));
     }
 
@@ -36,7 +36,7 @@ public class Stck {
         l1.push("Scania");
         l1.push("Daff");
         l1.size();
-        l1.peek();
+        l1.top();
         l1.display();
         
     }
