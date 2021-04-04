@@ -1,5 +1,4 @@
 package Teori;
-
 import java.util.ArrayList;
 
 public class Stck {
@@ -15,9 +14,9 @@ public class Stck {
         isi.remove(isi.size()-1);
     }
 
-    public void edit(int index, String inputData) {
+    // public void edit(int index, String inputData) {
         
-    }
+    // }
 
     public void display(){
         for (int i = 0; i < isi.size(); i++) {
