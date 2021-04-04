@@ -15,13 +15,8 @@ public class Stck {
         isi.remove(isi.size()-1);
     }
 
-    public void size(){
-        System.out.println("Panjang list = " + isi.size());
-    }
+    
 
-    public void top() {
-        System.out.println("Data top = " + (isi.get(isi.size()-1)));
-    }
 
     public void display(){
         for (int i = 0; i < isi.size(); i++) {
@@ -35,8 +30,7 @@ public class Stck {
         l1.push("Volvo");
         l1.push("Scania");
         l1.push("Daff");
-        l1.size();
-        l1.top();
+        l1.pop();
         l1.display();
         
     }
