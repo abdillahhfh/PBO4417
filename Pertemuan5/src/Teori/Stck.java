@@ -15,15 +15,15 @@ public class Stck {
         isi.remove(isi.size()-1);
     }
 
-    
-
+    public void edit(int index, String inputData) {
+        
+    }
 
     public void display(){
         for (int i = 0; i < isi.size(); i++) {
             System.out.print(isi.get(i) + " <-- ");
         }
     }
-    
 
     public static void main(String[] args) {
         Stck l1 = new Stck();
