@@ -10,6 +10,8 @@ public class Car extends MotorVehicle {
             this.setBelt = true;
         } else if(seatBelt == 0){
             this.setBelt = false;
+        } else{
+            System.out.println("SeatBelt Error");
         }
     }
 
