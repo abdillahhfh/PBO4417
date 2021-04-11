@@ -1,6 +1,6 @@
 package Praktikum;
 
-public class MotorCycle extends MotorVehicle {
+class MotorCycle extends MotorVehicle {
     int numGear = 0;
 
     MotorCycle(){}

@@ -1,6 +1,6 @@
 package Praktikum;
 
-public class Vehicle {
+class Vehicle {
     double speed = 0;
     String color = "Orange";
 

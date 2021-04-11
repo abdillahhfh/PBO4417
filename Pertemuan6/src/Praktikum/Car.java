@@ -1,6 +1,6 @@
 package Praktikum;
 
-public class Car extends MotorVehicle {
+class Car extends MotorVehicle {
     boolean setBelt = false;
     
     Car(){}
