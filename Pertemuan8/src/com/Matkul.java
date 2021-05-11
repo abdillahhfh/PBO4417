@@ -2,7 +2,9 @@ package com;
 import java.util.ArrayList;
 
 public class Matkul{
-    
+    private ArrayList<String> mkPokok = new ArrayList<String>();
+    private ArrayList<String> mkTambahan = new ArrayList<String>();
+
     public static void main(String[] args) {
         ArrayList<String> mkPokok = new ArrayList<String>();
         mkPokok.add("PBO");
