@@ -63,7 +63,7 @@ public class Kalkulator extends Frame implements ActionListener{
             public void windowClosing(WindowEvent windowEvent){
                 System.exit(0);
             }
-        })
+        });
         setLayout(null);
         setVisible(true);
 
