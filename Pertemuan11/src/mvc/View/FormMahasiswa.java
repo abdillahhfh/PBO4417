@@ -266,6 +266,7 @@ public class FormMahasiswa extends javax.swing.JFrame {
     private void buttonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonResetActionPerformed
         // TODO add your handling code here:
         cbt.reset();
+        cbt.isiTabel();
     }//GEN-LAST:event_buttonResetActionPerformed
 
     //method

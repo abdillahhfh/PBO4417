@@ -28,7 +28,7 @@ public class DAOMahasiswa implements IMahasiswa{
     Connection connection;
     
     final String insert = "INSERT INTO tblmahasiswa(id, nim, nama, jk, alamat) VALUES (?,?,?,?,?);";
-    final String update = "UPDATE tblmahasiswa SET nim=?, nama=?, alamat=?, WHERE id=?;";
+    final String update = "UPDATE tblmahasiswa SET nim=?, nama=?, jk=? alamat=?, WHERE id=?;";
     final String delete = "DELETE FROM tblmahasiswa WHERE id=?;";
     final String select = "SELECT * FROM tblmahasiswa;";
     final String carinama = "SELECT * FROM tblmahasiswa WHERE nama LIKE?;";
@@ -66,11 +66,12 @@ public class DAOMahasiswa implements IMahasiswa{
         PreparedStatement statement = null;
         try{
             statement = connection.prepareStatement(update);
-            statement.setInt(1, b.getId());
-            statement.setString(2, b.getNim());
-            statement.setString(3, b.getNama());
-            statement.setString(4, b.getJk());
-            statement.setString(5, b.getAlamat());
+            
+            statement.setString(1, b.getNim());
+            statement.setString(2, b.getNama());
+            statement.setString(3, b.getJk());
+            statement.setString(4, b.getAlamat());
+            statement.setInt(5, b.getId());
             statement.executeUpdate();
         } catch(SQLException ex){
             System.out.println("Berhasil Update");
