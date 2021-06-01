@@ -54,12 +54,11 @@ public class ControllerMahasiswa {
     public void insert(){
         if(!frame.getTxtNim().getText().trim().isEmpty() & !frame.getTxtNama().getText().trim().isEmpty()){
             Mahasiswa b = new Mahasiswa();
-            
+            b.setId(Integer.parseInt(frame.getTxtID().getText()));
             b.setNim(frame.getTxtNim().getText());
             b.setNama(frame.getTxtNama().getText());
             b.setJk(frame.getTxtJk().getSelectedItem().toString());
             b.setAlamat(frame.getTxtAlamat().getText());
-            b.setId(Integer.parseInt(frame.getTxtID().getText()));
             implMahasiswa.insert(b);
             JOptionPane.showMessageDialog(null, "Simpan Data Sukses");
         } else{
@@ -70,11 +69,11 @@ public class ControllerMahasiswa {
     public void update(){
         if(!frame.getTxtID().getText().trim().isEmpty()){
             Mahasiswa b = new Mahasiswa();
+            b.setId(Integer.parseInt(frame.getTxtID().getText()));
             b.setNim(frame.getTxtNim().getText());
             b.setNama(frame.getTxtNama().getText());
             b.setJk(frame.getTxtJk().getSelectedItem().toString());
             b.setAlamat(frame.getTxtAlamat().getText());
-            b.setId(Integer.parseInt(frame.getTxtID().getText()));
             implMahasiswa.update(b);
             JOptionPane.showMessageDialog(null, "Update Data Sukses");
         } else{
