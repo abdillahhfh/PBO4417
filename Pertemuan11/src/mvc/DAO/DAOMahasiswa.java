@@ -28,7 +28,7 @@ public class DAOMahasiswa implements IMahasiswa{
     Connection connection;
     
     final String insert = "INSERT INTO tblmahasiswa(id, nim, nama, jk, alamat) VALUES (?,?,?,?,?);";
-    final String update = "UPDATE tblmahasiswa SET nim=?, nama=?, jk=? alamat=?, WHERE id=?;";
+    final String update = "UPDATE tblmahasiswa SET nim=?, nama=?, jk=? alamat=? WHERE id=?;";
     final String delete = "DELETE FROM tblmahasiswa WHERE id=?;";
     final String select = "SELECT * FROM tblmahasiswa;";
     final String carinama = "SELECT * FROM tblmahasiswa WHERE nama LIKE?;";
