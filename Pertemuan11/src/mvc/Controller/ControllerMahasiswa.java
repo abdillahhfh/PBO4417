@@ -54,10 +54,12 @@ public class ControllerMahasiswa {
     public void insert(){
         if(!frame.getTxtNim().getText().trim().isEmpty() & !frame.getTxtNama().getText().trim().isEmpty()){
             Mahasiswa b = new Mahasiswa();
+            
             b.setNim(frame.getTxtNim().getText());
             b.setNama(frame.getTxtNama().getText());
             b.setJk(frame.getTxtJk().getSelectedItem().toString());
             b.setAlamat(frame.getTxtAlamat().getText());
+            b.setId(Integer.parseInt(frame.getTxtID().getText()));
             implMahasiswa.insert(b);
             JOptionPane.showMessageDialog(null, "Simpan Data Sukses");
         } else{
@@ -86,7 +88,7 @@ public class ControllerMahasiswa {
             implMahasiswa.delete(id);
             JOptionPane.showMessageDialog(null, "Hapus Data Sukses");
         } else{
-            JOptionPane.showMessageDialog(frame, "Pilih data yang akna dihapus");
+            JOptionPane.showMessageDialog(frame, "Pilih data yang akan dihapus");
         }
     }
     

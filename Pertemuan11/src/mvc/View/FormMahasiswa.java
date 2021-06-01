@@ -240,7 +240,7 @@ public class FormMahasiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         cbt.delete();
         cbt.isiTabel();
-        cbt.cariNama();
+//        cbt.cariNama();
     }//GEN-LAST:event_buttonDeleteActionPerformed
 
     private void buttonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateActionPerformed

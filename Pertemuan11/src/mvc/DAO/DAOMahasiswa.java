@@ -41,10 +41,13 @@ public class DAOMahasiswa implements IMahasiswa{
         PreparedStatement statement = null;
         try{
             statement = connection.prepareStatement(insert);
+            statement.setInt(0, b.getId());
             statement.setString(1, b.getNim());
             statement.setString(2, b.getNama());
             statement.setString(3, b.getJk());
             statement.setString(4, b.getAlamat());
+            
+            
             statement.executeUpdate();
             ResultSet rs = statement.getGeneratedKeys();
             while(rs.next()){
