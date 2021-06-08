@@ -120,8 +120,8 @@ public class DAOPendaftar implements IntPendaftar{
             while(rs.next()){
                 Pendaftar p = new Pendaftar();
                 p.setId(rs.getInt("id"));
-                p.setNama(rs.getString("nim"));
-                p.setNik(rs.getString("nama"));
+                p.setNama(rs.getString("nama"));
+                p.setNik(rs.getString("nik"));
                 p.setJk(rs.getString("jk"));
                 p.setAlamat(rs.getString("alamat"));
                 p.setUsia(rs.getString("usia"));
