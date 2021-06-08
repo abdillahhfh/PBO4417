@@ -79,6 +79,35 @@ public class ControllerPendaftaran {
         }
     }
     
+    public void update(){
+        
+    }
+    
+    public void delete(){
+        if(!frameA.getTxtID().getText().trim().isEmpty()){
+            int id = Integer.parseInt(frameA.getTxtID().getText());
+            ImplPendaftar.delete(id);
+            JOptionPane.showMessageDialog(null, "Hapus Data Sukses");
+        } else{
+            JOptionPane.showMessageDialog(frameA, "Masukkan ID untuk menghapus");
+        }
+    }
+    
+    public void isiTableCariNama(){
+        lb = ImplPendaftar.getCariNama(frameA.getTxtCariNama().getText());
+        TabelModelPendaftar tmb = new TabelModelPendaftar(lb);
+        frameA.getTableData().setModel(tmb);
+    }
+    
+    public void cariNama(){
+        if(!frameA.getTxtCariNama().getText().trim().isEmpty()){
+            ImplPendaftar.getCariNama(frameA.getTxtCariNama().getText());
+            isiTableCariNama();
+        } else{
+            JOptionPane.showMessageDialog(frameA, "Silakan Masukkan Nama Terlebih Dahulu");
+        }
+    }
+    
     
     
 }
