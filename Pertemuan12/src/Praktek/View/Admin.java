@@ -5,17 +5,22 @@
  */
 package Praktek.View;
 
+import javax.swing.*;
+import Praktek.Controller.ControllerPendaftaran;
 /**
  *
  * @author abdil
  */
 public class Admin extends javax.swing.JFrame {
-
+    ControllerPendaftaran cbt;
     /**
      * Creates new form Admin
      */
     public Admin() {
         initComponents();
+        cbt = new ControllerPendaftaran(this);
+        cbt.isiTable();
+        
     }
 
     /**
@@ -29,14 +34,14 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableData = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         txtCariID = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtCariNama = new javax.swing.JTextField();
         btnCari = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,7 +49,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Daftar Peserta Duta Coding 2021");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -55,7 +60,7 @@ public class Admin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableData);
 
         jLabel2.setText("ID:");
 
@@ -74,10 +79,25 @@ public class Admin extends javax.swing.JFrame {
         });
 
         btnCari.setText("Cari");
+        btnCari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCariActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Update");
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Hapus");
+        btnDelete.setText("Hapus");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,9 +107,9 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(54, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnUpdate)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2))
+                        .addComponent(btnDelete))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
@@ -121,8 +141,8 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnUpdate)
+                    .addComponent(btnDelete))
                 .addGap(45, 45, 45))
         );
 
@@ -137,6 +157,43 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCariNamaActionPerformed
 
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+//        cbt.update();
+        cbt.isiTable();
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+//        cbt.delete();
+        cbt.isiTable();
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
+        // TODO add your handling code here:
+//        cbt.cariNama();
+    }//GEN-LAST:event_btnCariActionPerformed
+
+    public JTable getTableData(){
+        return tableData;
+    }
+    
+    public JButton getButtonUpdate(){
+        return btnUpdate;
+    }
+    
+    public JButton getButtonDelete(){
+        return btnDelete;
+    }
+    
+    public JButton getButtonCari(){
+        return btnCari;
+    }
+    
+    public JTextField getTxtCariNama(){
+        return txtCariNama;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -174,13 +231,13 @@ public class Admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCari;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tableData;
     private javax.swing.JTextField txtCariID;
     private javax.swing.JTextField txtCariNama;
     // End of variables declaration//GEN-END:variables
