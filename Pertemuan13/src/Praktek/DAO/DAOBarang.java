@@ -138,7 +138,7 @@ public class DAOBarang implements IBarang{
         }catch(SQLException ex){
             Logger.getLogger(DAOBarang.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return list_barang;
     }
     
 }
