@@ -4,17 +4,20 @@
  * and open the template in the editor.
  */
 package Praktek.View;
-
+import Praktek.Controller.ControllerBarang;
+import javax.swing.*;
 /**
  *
  * @author abdil
  */
 public class FormBarang extends javax.swing.JFrame {
-
+    ControllerBarang cbt;
     /**
      * Creates new form FormBarang
      */
     public FormBarang() {
+        cbt = new ControllerBarang(this);
+        cbt.isiTabel();
         initComponents();
     }
 
@@ -242,6 +245,46 @@ public class FormBarang extends javax.swing.JFrame {
         cbt.cariNama();
     }//GEN-LAST:event_btnCariActionPerformed
 
+    public JTextField getTxtID(){
+        return txtId;
+    }
+    
+    public JTextField getTxtNama(){
+        return txtNama;
+    }
+    
+    public JTextField getTxtJumlah(){
+        return txtJumlah;
+    }
+    
+    public JTextField getTxtCariNama(){
+        return txtCari;
+    }
+    
+    public JTable getTabelData(){
+        return tabelBarang;
+    }
+    
+    public JButton getButtonInsert(){
+        return btnInsert;
+    }
+    
+    public JButton getButtonUpdate(){
+        return btnUpdate;
+    }
+    
+    public JButton getButtonDelete(){
+        return btnDelete;
+    }
+    
+    public JButton getButtonReset(){
+        return btnReset;
+    }
+    
+    public JButton getButtonCari(){
+        return btnCari;
+    }
+    
     /**
      * @param args the command line arguments
      */
